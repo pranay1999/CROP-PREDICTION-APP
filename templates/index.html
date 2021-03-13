@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:black">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+			<h2> 0:Average  1: Good    2: Poor</h2>
+            <h3>Year</h3>
+            <input id="first" name="Year" type="number ">
+            <h3>What is the Temperature?(In Celsius)</h3><br><input id="second" name="Temperature" required="required">
+            <h3>Crop desired?</h3><br><select name="Crop_Tomato"  id="Crop" required="required">
+                <option value="Tomato">Tomato</option>
+                <option value="Chilli">Chilli</option>
+                <option value="Potato">Potato</option>
+             </select>
+            <h3>What is your soil ?</h3><br><select name="Soil_Red" id="Soil" required="required">
+                <option value="Red">Red</option>
+                <option value="Black">Black</option>
+                <option value="Brown">Brown</option>
+            </select>
+            <h3>Texture of the Soil</h3><br><select name="Soil_Texture_Loamy" id="Soil_Texture" required="required">
+                <option value="Loamy">Loamy</option>
+                <option value="Clayey">Clayey</option>
+                <option value="Sandy">Sandy</option>
+            </select>
+            <h3> Colour of your soil ?</h3><br><select name="Soil_Red" id="Soil_Colour" required="required">
+                <option value="Red">Red</option>
+                <option value="Black">Black</option>
+                <option value="Brown">Brown</option>
+            </select>
+            <h3>Drainage Type</h3><br><select name="Drainage_High" id="Drainage" required="required">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            
+            <h3>Water Holding Capacity of the soil</h3><br><select name=" Water_holding_capacity_Low" id="Water_holding_capacity" required="required">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+             <h3> Level of Sunlight According to you</h3><br><select name="Sunlight_hgh" id="Sunlight" required="required">
+                <option value="Hgh">High</option>
+                <option value="low">Medium</option>
+                <option value="nor">Low</option>
+            </select>
+            <br><br><button id="sub" type="submit ">PREDCIT THE CROP YIELD</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
