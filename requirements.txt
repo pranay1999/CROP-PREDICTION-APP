@@ -81,7 +81,6 @@ jupyterlab==1.2.6
 jupyterlab-server==1.0.6
 keyring==21.1.0
 Kivy==2.0.0
-kivy-deps.glew==0.3.0
 kivy-deps.gstreamer==0.3.1
 kivy-deps.sdl2==0.3.1
 Kivy-Garden==0.1.4
