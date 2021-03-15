@@ -1,1 +1,1 @@
-web: gunicorn FINALAPP:FINALAPP
+web: gunicorn FINALAPP:cropyield-prediction
