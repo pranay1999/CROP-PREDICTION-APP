@@ -1,4 +1,4 @@
-
+gunicorn==20.0.4
 filelock==3.0.12
 flake8==3.7.9
 Flask==1.1.1
